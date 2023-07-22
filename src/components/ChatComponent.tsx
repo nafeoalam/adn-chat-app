@@ -13,7 +13,6 @@ const ChatComponent: React.FC = () => {
     console.log({ socket });
     // Authenticate the WebSocket connection with the JWT token
     const token = localStorage.getItem("token"); // Assuming you store the JWT token in local storage after login
-    console.log(token);
     if (token) {
       socket.emit("authenticate", { token });
     }
